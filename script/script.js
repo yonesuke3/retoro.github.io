@@ -204,7 +204,7 @@
                 //取得したアイテムが酒だった場合の抽選
                 if(item[i].getScore() == 0){
                     got_Elixir++;
-                    Elixir_flag[now_elixir-1] = '酒';
+                    Elixir_flag[now_elixir-1] = '牛';
                     if(got_Elixir == 3){
                         surume = 7;
                         actor.setElixir(2,1000);
