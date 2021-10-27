@@ -18,6 +18,9 @@
     const ITEM_G_RATE = 95;
     const EFFECT_TIME = 700;
     const TIMELIMIT = 200;
+    const fonturl = 'https://fonts.googleapis.com/css2?family=DotGothic16&display=swap';
+    const dotFont = new FontFace('DotGothic16',`url(${fonturl})`);
+    document.fonts.add(dotFont);
 
     let item = [];
     let imageArray = [];
@@ -101,7 +104,7 @@
         imageArray[9] = new Image(CANVAS_WIDTH,CANVAS_HEIGHT);
         imageArray[9].src = "./image/ULOCO2.png";//frame
 
-        titleokina = new Character(ctx,300,600,1000,1200,imageArray[3]);
+        titleokina = new Character(ctx,250,590,600,600,imageArray[4]);
         
 
         initialize();
@@ -206,7 +209,7 @@
                         surume = 7;
                         actor.setElixir(2,1000);
                         Sound_onGame.volume += 0.05;
-                        messageArr[messageArr.length] = new MessageLog(ctx,"スーパーするめタイム！！");
+                        messageArr[messageArr.length] = new MessageLog(ctx,"麺を入れろ！！");
                     }else{
                         sake_eff = myrand(4);
                         sakeTime = EFFECT_TIME;
@@ -225,7 +228,7 @@
                         }else{
                             lucky = 1;
                             console.log('lucky singorou!!');
-                            messageArr[messageArr.length] = new MessageLog(ctx,"しんごろうが降り注ぐ！");
+                            messageArr[messageArr.length] = new MessageLog(ctx,"たらいが赤べこに変わった！");
                         }
                     }    
                 }
@@ -311,7 +314,7 @@
 
         //白抜き
         ctx.fillStyle = '#ffffff';
-        ctx.font = '35px serif';
+        ctx.font = '35px DotGothic16';
         ctx.fillText('炎のラーメン屋台！！',(CANVAS_WIDTH/5-25)+2,(CANVAS_HEIGHT/3)+2);
         ctx.fillText('炎のラーメン屋台',(CANVAS_WIDTH/5-25)+2,(CANVAS_HEIGHT/3)-2);
         ctx.fillText('炎のラーメン屋台',(CANVAS_WIDTH/5-25)-2,(CANVAS_HEIGHT/3)+2);

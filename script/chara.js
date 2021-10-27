@@ -356,7 +356,7 @@ class MessageLog{
         this.ctx.globalAlpha= 0.5;
 
         this.ctx.fillStyle = "#708090";
-        this.ctx.font = "18px serif";
+        this.ctx.font = `18px serif`;
         this.ctx.fillRect(this.x,this.y-10,650,30);
 
         this.ctx.globalAlpha = 1.0;
