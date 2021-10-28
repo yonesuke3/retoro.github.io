@@ -57,11 +57,11 @@ class Actor extends Character{
     }
 
     update(){
-        if(window.isKeyDown.key_ArrowRight === true){
+        if(window.isKeyDown.key_d === true){
             this.position.x += this.speed * this.status;
             this.vec = 1;
         }
-        if(window.isKeyDown.key_ArrowLeft === true){
+        if(window.isKeyDown.key_a === true){
             this.position.x -= this.speed * this.status;
             this.vec = 0;
         }
@@ -139,7 +139,7 @@ class Zanzou extends Character{
 class Item extends Character{
     constructor(ctx,score,image){
         super(ctx,Math.floor(Math.random()*375),0,50,50,image);
-        this.speed = Math.floor(Math.random()*3 + 4);
+        this.speed = Math.floor(Math.random()*3 + 2);
         this.score = score;
         this.life = 1;
         this.bufTime = 0;

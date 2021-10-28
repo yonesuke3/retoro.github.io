@@ -15,7 +15,7 @@
     const BTN_Y = 520;
     const BTN_HEIGHT = 140;
     const BTN_WIDTH = 150;
-    const ITEM_G_RATE = 95;
+    const ITEM_G_RATE = 97.3;
     const EFFECT_TIME = 700;
     const TIMELIMIT = 200;
     const fonturl = 'https://fonts.googleapis.com/css2?family=DotGothic16&display=swap';
@@ -84,7 +84,7 @@
 
         //画像のプリロード
         imageArray[0] = new Image();
-        imageArray[0].src = "./image/matinami.jpg";
+        imageArray[0].src = "./image/yuyake.png";
         imageArray[1] = new Image();
         imageArray[1].src = "./image/negi.png";
         imageArray[2] = new Image();
@@ -346,18 +346,12 @@
         util.drawRect(0,0,canvas.width,canvas.height,'#ffffff');
         if(scene != TITLE){scene = GAMEOVER;}
 
-        if(score >= 8000){
-            grade = 'ラーメン屋は大繁盛だった！';
-        }else if(score >= 5000){
-            grade = 'まぁまぁの繁盛ぶりだ';
-        }else if(score >= 4000){
-            grade = 'そこそこお店は繁盛した';
-        }else if(score >= 3000){
-            grade = 'あまり客足は振るわなかった';
-        }else if(score >= 1){
-            grade = '一人もお店に来なかった…';
+        if(score >= 5000){
+            grade = '熱盛ィィ！！！';
+        }else if(score >= 2000){
+            grade = '大盛り！';
         }else{
-            grade = 'たらいは取ってはいけませんよ？';
+            grade = '頑張ったで賞';
         }
 
         if(gameover_text_init == false){
@@ -386,6 +380,7 @@
     function eventSetting(){
         window.addEventListener('keydown',(event) =>{
             isKeyDown[`key_${event.key}`] = true;
+            console.log(`key ${event.key} pushed`);
         },false);
 
         window.addEventListener('keyup',(event) =>{
