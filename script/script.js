@@ -84,7 +84,7 @@
 
         //画像のプリロード
         imageArray[0] = new Image();
-        imageArray[0].src = "./image/yuyake.png";
+        imageArray[0].src = "./image/matinami.jpg";
         imageArray[1] = new Image();
         imageArray[1].src = "./image/negi.png";
         imageArray[2] = new Image();
